@@ -5,4 +5,5 @@ model
 *.swp
 *.p
 .DS_Store
+.idea
 
