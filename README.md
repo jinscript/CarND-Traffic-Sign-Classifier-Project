@@ -74,7 +74,11 @@ My final model (LeNet) consisted of the following layers:
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+To train the model, I used following setups:
+* optimizer: Adam
+* batch size: 128
+* number of epochs: 50
+* learning rate: 0.01
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -85,25 +89,25 @@ My final model results were:
 
 * What was the first architecture that was tried and why was it chosen?
 
-I first implemented a softmax regression model since it is good for fast prototyping
+  I first implemented a softmax regression model since it is good for fast prototyping
 and does not require GPU resources.
 
 * What were some problems with the initial architecture?
 
-Model is too simple and underfits the data.
+  Model is too simple and underfits the data.
 
 * What architecture was chosen?
 
-The final model is exactly LeNet's architecture with adjusted input and output dimensions.
+  The final model is exactly LeNet's architecture with adjusted input and output dimensions.
 
 * Why did you believe it would be relevant to the traffic sign application?
 
-LeNet is proven to be successful in digit recognition tasks.
+  LeNet is proven to be successful in digit recognition tasks.
 It should be promising for recognizing road signs as well.
 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
 
-Both validation accuracy and test accuracy passes the base line (0.93).
+  Both validation accuracy and test accuracy passes the base line (0.93).
 Although the model can definitely be improve, but it is already a good enough POC for using CNN on traffic sign dataset.
 
 ###Test a Model on New Images
@@ -121,11 +125,11 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Speed limit (20km/h)  | Speed limit (20km/h)   						| 
+| Speed limit (30km/h)  | Speed limit (30km/h) 							|
+| Speed limit (50km/h)	| Speed limit (50km/h)							|
+| Speed limit (60km/h)	| Speed limit (60km/h)					 		|
+| Speed limit (70km/h)	| Speed limit (70km/h)      					|
 
 The model gives 100% accuracy.
 
@@ -137,11 +141,11 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 0.99         			| Speed limit (20km/h)   						| 
+| 1.00    				| Speed limit (30km/h) 							|
+| 1.00					| Speed limit (50km/h)							|
+| 1.00	      			| Speed limit (60km/h)					 		|
+| 1.00				    | Speed limit (70km/h)      					|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
