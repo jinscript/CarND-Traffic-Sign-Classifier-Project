@@ -86,8 +86,8 @@ To train the model, I used following setups:
 
 My final model results were:
 * training set accuracy of 0.999
-* validation set accuracy of 0.966
-* test set accuracy of 0.937
+* validation set accuracy of 0.939
+* test set accuracy of 0.933
 
 * What was the first architecture that was tried and why was it chosen?
 
@@ -129,10 +129,10 @@ Here are the results of the prediction:
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Speed limit (20km/h)  | Speed limit (20km/h)   						| 
-| No passing over 3.5t  | Speed limit (30km/h) 							|
-| Road narrows on right	| Speed limit (50km/h)							|
-| Pedestrians	        | Speed limit (60km/h)					 		|
-| Keep right	        | Speed limit (70km/h)      					|
+| No passing over 3.5t  | No passing over 3.5t							|
+| Road narrows on right	| Road narrows on right		                	|
+| Pedestrians	        | Pedestrians					            	|
+| Keep right	        | Keep right     		                        |
 
 The model gives 100% accuracy.
 
@@ -144,11 +144,11 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 0.99         			| Speed limit (20km/h)   						| 
-| 1.00    				| Speed limit (30km/h) 							|
-| 1.00					| Speed limit (50km/h)							|
-| 1.00	      			| Speed limit (60km/h)					 		|
-| 1.00				    | Speed limit (70km/h)      					|
+| 1.00         			| Speed limit (20km/h)   						| 
+| 4.35e-27    		    | Speed limit (30km/h) 							|
+| 4.70e-37				| Right-of-way at the next intersection			|
+| 3.22e-37	      		| Children crossing					 		    |
+| 0.00e+00				| Speed limit (50km/h)      					|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
