@@ -92,7 +92,7 @@ My final model results were:
 * What was the first architecture that was tried and why was it chosen?
 
   I first implemented a softmax regression model since it is good for fast prototyping
-and does not require GPU resources.
+and it does not require GPU resources.
 
 * What were some problems with the initial architecture?
 
@@ -113,7 +113,7 @@ It should be promising for recognizing road signs as well.
  Although the model definitely has room for improvement,
  but it is already a good enough POC for using CNN on traffic sign dataset.
 
-###Test a Model on New Images
+### Test a Model on New Images
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
