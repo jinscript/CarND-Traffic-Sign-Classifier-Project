@@ -149,17 +149,55 @@ The model gives 60% accuracy.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+Image: Speed limit (20km/h)
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 1.00         			| Speed limit (20km/h)   						| 
-| 4.35e-27    		    | Speed limit (30km/h) 							|
-| 4.70e-37				| Right-of-way at the next intersection			|
-| 3.22e-37	      		| Children crossing					 		    |
-| 0.00e+00				| Speed limit (50km/h)      					|
+| 0.99          		| Speed limit (120km/h)   						| 
+| 3.47e-06    		    | Speed limit (80km/h) 							|
+| 2.03e-06				| Speed limit (20km/h)                   		|
+| 1.47e-08	      		| Speed limit (70km/h)					 		|
+| 6.63e-11				| Keep right                 					|
+
+Image: No passing over 3.5t
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00e+00         		| No passing over 3.5t10,  7, 25, 12, 42  	    | 
+| 2.14e-26    		    | Speed limit (100km/h) 				        |
+| 1.42e-26				| Road work                   		            |
+| 3.15e-28	      		| Priority road					 		        |
+| 7.35e-29				| End of no passing over 3.5t              		|
+
+Image: Road narrows on right
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.98          		| Road narrows on the right  					| 
+| 1.38e-02    		    | Bicycles crossing 							|
+| 3.22e-03				| Speed limit (120km/h)                   		|
+| 2.12e-03	      		| Double curve					 	        	|
+| 3.14e-04				| Children crossing                 		    |
+
+Image: Pedestrians
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.99          		| Pedestrians             						| 
+| 1.39e-05    		    | General caution 						    	|
+| 2.82e-07				| Road narrows on right                   		|
+| 1.56e-07	      		| Speed limit (30km/h)					 		|
+| 7.58e-10				| Speed limit (20km/h)                 			|
+
+Image: Keep right
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00         	    	| Keep right                       		    	| 
+| 6.37e-33    		    | Dangerous curve to the right 				    |
+| 0.00e+00				| Speed limit (20km/h)                   		|
+| 0.00e+00	      		| Speed limit (30km/h)					 		|
+| 0.00e+00				| Speed limit (50km/h)                 			|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
