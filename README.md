@@ -17,11 +17,13 @@ The goals / steps of this project are the following:
 
 [bar_chart]: ./md_assets/bar_chart.png "Bar Chart"
 [rotation]: ./md_assets/rotation.png "Rotation"
-[traffic_sign_1]: ./traffic_signs/0.ppm "Traffic Sign 1"
-[traffic_sign_2]: ./traffic_signs/1.ppm "Traffic Sign 2"
-[traffic_sign_3]: ./traffic_signs/2.ppm "Traffic Sign 3"
-[traffic_sign_4]: ./traffic_signs/3.ppm "Traffic Sign 4"
-[traffic_sign_5]: ./traffic_signs/4.ppm "Traffic Sign 5"
+[traffic_sign_1]: ./traffic_signs/0.png "Traffic Sign 1"
+[traffic_sign_2]: ./traffic_signs/10.png "Traffic Sign 2"
+[traffic_sign_3]: ./traffic_signs/24.png "Traffic Sign 3"
+[traffic_sign_4]: ./traffic_signs/27.png "Traffic Sign 4"
+[traffic_sign_5]: ./traffic_signs/38.png "Traffic Sign 5"
+[conv_1]: ./md_assets/conv1.png "Conv 1"
+[conv_2]: ./md_assets/conv2.png "Conv 2"
 
 ---
 
@@ -108,7 +110,8 @@ It should be promising for recognizing road signs as well.
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
 
   Both validation accuracy and test accuracy passes the base line (0.93).
-Although the model can definitely be improve, but it is already a good enough POC for using CNN on traffic sign dataset.
+ Although the model definitely has room for improvement,
+ but it is already a good enough POC for using CNN on traffic sign dataset.
 
 ###Test a Model on New Images
 
@@ -126,10 +129,10 @@ Here are the results of the prediction:
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Speed limit (20km/h)  | Speed limit (20km/h)   						| 
-| Speed limit (30km/h)  | Speed limit (30km/h) 							|
-| Speed limit (50km/h)	| Speed limit (50km/h)							|
-| Speed limit (60km/h)	| Speed limit (60km/h)					 		|
-| Speed limit (70km/h)	| Speed limit (70km/h)      					|
+| No passing over 3.5t  | Speed limit (30km/h) 							|
+| Road narrows on right	| Speed limit (50km/h)							|
+| Pedestrians	        | Speed limit (60km/h)					 		|
+| Keep right	        | Speed limit (70km/h)      					|
 
 The model gives 100% accuracy.
 
@@ -149,3 +152,11 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+
+![alt text][conv_1]
+
+Feature map from first convolution layer shows some patterns of the shape of traffic signs.
+
+![alt text][conv_2]
+
+Since second convolution layer only has feature map of 5x5, it is very hard to tell what patterns it learned.
